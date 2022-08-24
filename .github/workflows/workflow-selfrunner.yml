@@ -1,9 +1,5 @@
-name : Rahul CI
+name : Rahul CI self runner
 
-env:
-  message: "It is written in environment variable"
-  year : 2022
-  web_server: windows-latest
 
 on: 
   push:
@@ -18,7 +14,7 @@ jobs:
   build_first:
 
     runs-on: self-hosted
-    
+
     steps:
 
       - uses: actions/checkout@v3
