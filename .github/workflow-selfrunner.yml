@@ -1,0 +1,44 @@
+name : Rahul CI
+
+env:
+  message: "It is written in environment variable"
+  year : 2022
+  web_server: windows-latest
+
+on: 
+  push:
+    branches: ["main", "master"]
+  pull_request: 
+    branches: ["main", "master"]
+
+  workflow_dispatch:
+
+jobs:
+
+  build_first:
+
+    runs-on: self-hosted
+
+    steps:
+
+      - uses: actions/checkout@v3
+
+      - name: Run a single line script
+        run: echo $message
+
+      - name: Run a poly-line script
+        run: |
+          echo This is first line and,
+          echo This is the second line
+  
+  build_second:
+    runs-on: self-hosted
+
+    steps:
+
+      - uses: actions/checkout@v3
+
+      - name: Heres the second job
+        run: |
+          echo this is a second job which is created by me,
+          echo year - 2022
