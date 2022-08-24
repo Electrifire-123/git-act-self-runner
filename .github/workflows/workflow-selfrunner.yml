@@ -3,7 +3,7 @@ name : Rahul CI
 env:
   message: "It is written in environment variable"
   year : 2022
-  web_server: self-hosted
+  web_server: windows-latest
 
 on: 
   push:
@@ -18,7 +18,7 @@ jobs:
   build_first:
 
     runs-on: self-hosted
-
+    
     steps:
 
       - uses: actions/checkout@v3
@@ -32,7 +32,7 @@ jobs:
           echo This is the second line
   
   build_second:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
 
