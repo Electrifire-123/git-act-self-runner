@@ -17,7 +17,7 @@ jobs:
 
   build_first:
 
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
 
@@ -32,7 +32,7 @@ jobs:
           echo This is the second line
   
   build_second:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
 
