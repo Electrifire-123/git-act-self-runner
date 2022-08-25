@@ -1,5 +1,8 @@
-name : Rahul CI self runner
+name : Rahul CI self hosted
 
+env:
+  Message: "It is written in environment variable"
+ 
 
 on: 
   push:
@@ -11,7 +14,7 @@ on:
 
 jobs:
 
-  build_first:
+  first_job:
 
     runs-on: self-hosted
 
@@ -20,21 +23,21 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Run a single line script
-        run: echo abcd
+        run: echo $Message
 
       - name: Run a poly-line script
         run: |
           echo This is first line and,
           echo This is the second line
   
-  build_second:
+  second_job:
     runs-on: self-hosted
 
     steps:
 
       - uses: actions/checkout@v3
 
-      - name: Heres the second job
+      - name: Run a multi-line script
         run: |
-          echo this is a second job which is created by me,
-          echo year - 2022
+          echo Add other actions to Test on build,
+          echo Deploy successfull.
