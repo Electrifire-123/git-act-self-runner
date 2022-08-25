@@ -1,6 +1,7 @@
 name : Rahul CI self hosted
 
-
+env:
+  Messeage: This is the message in env
 
 on: 
   push:
@@ -26,6 +27,7 @@ jobs:
       - name: Run a poly-line script
         run: |
           echo This is first line and,
+          echo $Message
   
   second_job:
     runs-on: self-hosted
