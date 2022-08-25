@@ -26,7 +26,6 @@ jobs:
       - name: Run a poly-line script
         run: |
           echo This is first line and,
-          echo This is the second line
   
   second_job:
     runs-on: self-hosted
