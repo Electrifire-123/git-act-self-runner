@@ -1,8 +1,6 @@
 name : Rahul CI self hosted
 
-env:
-  Message: "It is written in environment variable"
- 
+
 
 on: 
   push:
@@ -23,7 +21,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Run a single line script
-        run: echo $Message
+        run: echo Hello duniya
 
       - name: Run a poly-line script
         run: |
