@@ -40,3 +40,6 @@ jobs:
         run: |
           echo Running on self-hosted runner,
           echo with secret key.
+      - name: work
+        id: work
+        run: echo Hello Duniya!
